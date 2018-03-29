@@ -6,7 +6,8 @@ public class Launcher {
 
 	public static void main(String[] args) {
 		Toolkit tk = Toolkit.getDefaultToolkit();
-		tk.beep();
+		Engine engine = new Engine(tk.getScreenSize()).setBackgroundColor(0x00);
+		engine.start();
 	}
 
 }
