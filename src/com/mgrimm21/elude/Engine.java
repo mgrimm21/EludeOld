@@ -13,6 +13,7 @@ public class Engine implements Runnable{
 	private int width, height;
 	private boolean running = false;
 	private Color backColor;
+	private SceneManager sceneManager = new SceneManager();
 	
 	public Engine(final Dimension windowSize) {
 		width = windowSize.width;
@@ -41,6 +42,7 @@ public class Engine implements Runnable{
 		if (Keyboard.down(KeyEvent.VK_ESCAPE)) {
 			System.exit(0);
 		}
+		sceneManager.tick();
 	}
 	
 	public void render() {
@@ -53,6 +55,7 @@ public class Engine implements Runnable{
 		Graphics g = bs.getDrawGraphics();
 		g.setColor(backColor);
 		g.fillRect(0, 0, width, height);
+		sceneManager.render(g);
 		g.dispose();
 		bs.show();
 	}
@@ -95,6 +98,22 @@ public class Engine implements Runnable{
 				updates = 0;
 			}
 		}
+	}
+	
+	public void addScene(Scene scene) {
+		sceneManager.addScene(scene);
+	}
+	
+	public void removeScene(Scene scene) {
+		sceneManager.removeScene(scene);
+	}
+	
+	public void setScene(Scene scene) {
+		sceneManager.setScene(scene);
+	}
+
+	public SceneManager getSceneManager() {
+		return sceneManager;
 	}
 	
 }
