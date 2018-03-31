@@ -34,5 +34,15 @@ public class SceneManager {
 	public void setScene(Scene s) {
 		activeScene = s;
 	}
+
+	public Scene getActiveScene() {
+		return activeScene;
+	}
+
+	public void setActiveScene(Scene activeScene) {
+		this.activeScene = activeScene;
+	}
+	
+	
 	
 }

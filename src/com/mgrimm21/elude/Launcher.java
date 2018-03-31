@@ -15,6 +15,13 @@ public class Launcher {
 		UIPanel panel = new UIPanel(400, 0, 500, 100, Color.red, Color.white);
 		panel.addChild(new UIPanel(100, 40, 32, 32, Color.red, Color.yellow));
 		scene.addComponent(panel);
+		UIButton button1 = new UIButton(400, 300, 100, 40, Color.blue, Color.yellow, Color.green) {
+			@Override
+			public void onClick() {
+				System.out.println("Test");
+			}
+		};
+		scene.addComponent(button1);
 		engine.addScene(scene);
 	}
 

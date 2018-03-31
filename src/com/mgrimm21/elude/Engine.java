@@ -8,6 +8,8 @@ import java.awt.image.BufferStrategy;
 
 public class Engine implements Runnable{
 	
+	public static Engine instance;
+	
 	private Window window;
 	private Thread thread;
 	private int width, height;
@@ -16,6 +18,7 @@ public class Engine implements Runnable{
 	private SceneManager sceneManager = new SceneManager();
 	
 	public Engine(final Dimension windowSize) {
+		instance = this;
 		width = windowSize.width;
 		height = windowSize.height;
 		window = new Window(windowSize);
@@ -42,6 +45,7 @@ public class Engine implements Runnable{
 		if (Keyboard.down(KeyEvent.VK_ESCAPE)) {
 			System.exit(0);
 		}
+		window.mouse.tick();
 		sceneManager.tick();
 	}
 	

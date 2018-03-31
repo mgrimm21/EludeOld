@@ -11,6 +11,7 @@ public class Window {
 	protected Dimension size;
 	protected Canvas canvas = new Canvas();
 	protected JFrame frame = new JFrame();
+	protected Mouse mouse = new Mouse(this);
 	
 	public Window(Dimension size) {
 		this.size = size;
@@ -22,6 +23,7 @@ public class Window {
 		frame.setLocationRelativeTo(null);
 		frame.add(canvas);
 		canvas.addKeyListener(new Keyboard());
+		canvas.addMouseListener(mouse);
 		canvas.setFocusable(true);
 		canvas.requestFocus();
 		canvas.setBackground(Color.black);
