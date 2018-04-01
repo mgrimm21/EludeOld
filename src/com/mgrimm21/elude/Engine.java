@@ -16,8 +16,10 @@ public class Engine implements Runnable{
 	private boolean running = false;
 	private Color backColor;
 	private SceneManager sceneManager = new SceneManager();
+	private PluginLoader pluginManager;
 	
 	public Engine(final Dimension windowSize) {
+		pluginManager = new PluginLoader();
 		instance = this;
 		width = windowSize.width;
 		height = windowSize.height;
@@ -47,6 +49,7 @@ public class Engine implements Runnable{
 		}
 		window.mouse.tick();
 		sceneManager.tick();
+		pluginManager.tick();
 	}
 	
 	public void render() {
@@ -60,6 +63,7 @@ public class Engine implements Runnable{
 		g.setColor(backColor);
 		g.fillRect(0, 0, width, height);
 		sceneManager.render(g);
+		pluginManager.render(g);
 		g.dispose();
 		bs.show();
 	}
