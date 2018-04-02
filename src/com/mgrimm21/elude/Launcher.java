@@ -1,6 +1,5 @@
 package com.mgrimm21.elude;
 
-import java.awt.Color;
 import java.awt.Toolkit;
 
 public class Launcher {
@@ -10,18 +9,8 @@ public class Launcher {
 		Engine engine = new Engine(tk.getScreenSize()).setBackgroundColor(0x00);
 		engine.start();
 		Scene scene = new Scene();
-		GameObject player = new GameObject(100, 100, 32, 32);
-		scene.addObject(player);
-		UIPanel panel = new UIPanel(400, 0, 500, 100, Color.red, Color.white);
-		panel.addChild(new UIPanel(100, 40, 32, 32, Color.red, Color.yellow));
-		scene.addComponent(panel);
-		UIButton button1 = new UIButton(400, 300, 100, 40, Color.blue, Color.yellow, Color.green) {
-			@Override
-			public void onClick() {
-				System.out.println("Test");
-			}
-		};
-		scene.addComponent(button1);
+		TestEntity ent = new TestEntity(400, 300);
+		scene.addObject(ent);
 		engine.addScene(scene);
 	}
 
