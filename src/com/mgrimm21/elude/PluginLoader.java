@@ -17,17 +17,13 @@ public class PluginLoader {
 			s = s.trim();
 			try {
 				Class<?> c = Class.forName(s);
-				try {
-					plugins.add((Plugin) c.newInstance());
-				} catch (InstantiationException | IllegalAccessException e) {
-					e.printStackTrace();
-				}
-			} catch (ClassNotFoundException e) {
+				plugins.add((Plugin) c.getDeclaredConstructor(Engine.class).newInstance(Engine.instance));
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
-		for (Plugin p: plugins) {
-			p.onEnable();
+			for (Plugin p: plugins) {
+				p.onEnable();
+			}
 		}
 	}
 	

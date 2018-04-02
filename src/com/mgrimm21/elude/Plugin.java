@@ -2,11 +2,17 @@ package com.mgrimm21.elude;
 
 import java.awt.Graphics;
 
-public interface Plugin {
+public abstract class Plugin {
+	
+	public Engine engine;
+	
+	public Plugin(Engine engine) {
+		this.engine = engine;
+	}
 
-	void onEnable();
-	void onDisable();
-	void tick();
-	void render(Graphics g);
+	public abstract void onEnable();
+	public abstract void onDisable();
+	public abstract void tick();
+	public abstract void render(Graphics g);
 	
 }
