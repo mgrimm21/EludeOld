@@ -2,7 +2,6 @@ package com.mgrimm21.elude;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.util.Random;
 
 public abstract class UIButton extends UIComponent{
 
