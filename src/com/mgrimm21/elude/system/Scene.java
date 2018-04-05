@@ -1,8 +1,11 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.system;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.mgrimm21.elude.entity.GameObject;
+import com.mgrimm21.elude.gfx.UIComponent;
 
 public class Scene {
 	

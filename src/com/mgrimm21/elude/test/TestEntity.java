@@ -1,6 +1,10 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.test;
 
 import java.awt.event.KeyEvent;
+
+import com.mgrimm21.elude.entity.Entity;
+import com.mgrimm21.elude.gfx.Sprite;
+import com.mgrimm21.elude.input.Keyboard;
 
 public class TestEntity extends Entity{
 

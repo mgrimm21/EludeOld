@@ -1,4 +1,4 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.input;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

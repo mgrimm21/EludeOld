@@ -1,7 +1,9 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.gfx;
 
 import java.awt.Color;
 import java.awt.Graphics;
+
+import com.mgrimm21.elude.input.Mouse;
 
 public abstract class UIButton extends UIComponent{
 

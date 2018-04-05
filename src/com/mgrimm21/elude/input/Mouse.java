@@ -1,7 +1,9 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.input;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
+import com.mgrimm21.elude.gfx.Window;
 
 public class Mouse implements MouseListener{
 

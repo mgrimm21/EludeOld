@@ -2,8 +2,8 @@
 
 import java.awt.Graphics;
 
-import com.mgrimm21.elude.Engine;
-import com.mgrimm21.elude.Plugin;
+import com.mgrimm21.elude.main.Engine;
+import com.mgrimm21.elude.plugin.Plugin;
 
 public class ExamplePlugin extends Plugin{
 

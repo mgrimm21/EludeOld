@@ -1,6 +1,8 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.plugin;
 
 import java.awt.Graphics;
+
+import com.mgrimm21.elude.main.Engine;
 
 public abstract class Plugin {
 	

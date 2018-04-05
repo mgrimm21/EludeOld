@@ -1,4 +1,4 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.gfx;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -6,12 +6,15 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
+import com.mgrimm21.elude.input.Keyboard;
+import com.mgrimm21.elude.input.Mouse;
+
 public class Window {
 
 	protected Dimension size;
-	protected Canvas canvas = new Canvas();
-	protected JFrame frame = new JFrame();
-	protected Mouse mouse = new Mouse(this);
+	public Canvas canvas = new Canvas();
+	public JFrame frame = new JFrame();
+	public Mouse mouse = new Mouse(this);
 	
 	public Window(Dimension size) {
 		this.size = size;

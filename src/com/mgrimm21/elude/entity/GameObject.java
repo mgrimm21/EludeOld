@@ -1,4 +1,4 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.entity;
 
 import java.awt.Graphics;
 

@@ -1,4 +1,4 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.gfx;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

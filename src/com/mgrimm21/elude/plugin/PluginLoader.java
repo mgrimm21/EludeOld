@@ -1,9 +1,11 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.plugin;
 
 import java.awt.Graphics;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.mgrimm21.elude.main.Engine;
 
 public class PluginLoader {
 	

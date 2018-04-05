@@ -1,6 +1,9 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.test;
 
 import java.awt.Toolkit;
+
+import com.mgrimm21.elude.main.Engine;
+import com.mgrimm21.elude.system.Scene;
 
 public class Launcher {
 

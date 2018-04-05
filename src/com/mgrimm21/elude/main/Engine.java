@@ -1,10 +1,16 @@
-package com.mgrimm21.elude;
+package com.mgrimm21.elude.main;
 
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
+
+import com.mgrimm21.elude.gfx.Window;
+import com.mgrimm21.elude.input.Keyboard;
+import com.mgrimm21.elude.plugin.PluginLoader;
+import com.mgrimm21.elude.system.Scene;
+import com.mgrimm21.elude.system.SceneManager;
 
 public class Engine implements Runnable{
 	
